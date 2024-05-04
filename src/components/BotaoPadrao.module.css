@@ -1,0 +1,13 @@
+.btn {
+  padding: 1rem 2rem;
+  background: linear-gradient(to right bottom, #e5856e 0%, #e03593 100%);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  box-shadow: 0 0 0 4px #e5856e;
+}

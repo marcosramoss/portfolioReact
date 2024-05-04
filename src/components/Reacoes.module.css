@@ -1,0 +1,15 @@
+.reacoes{
+  display: flex;
+  gap: 1rem;
+}
+.reacoes button{
+  background: #f6f6f6;
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: .2s;
+}
+.reacoes button:hover{
+  background: #dfdfdf;
+}
