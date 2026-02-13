@@ -1,36 +1,52 @@
-:root{
-  --font-corpo: 'Open Sans';
-  --font-titulo: 'Poppins'
-}
-.fontCorpo{
-  font-family: var(--font-corpo);
-  line-height: 1.8;
-}
-.fontTitulo{
-  font-family: var(--font-titulo);
-  font-size: 3rem;
-  margin: 0;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
-*{
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
-  color: #333;
-}
+@layer components {
 
-.container{
-  box-sizing: border-box;
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-html{
-  scroll-behavior: smooth;
-}
-body{
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 0 20px;
-  margin: 0;
-  padding: 0;
+  /* --- Container --- */
+  .container {
+    @apply max-w-[1160px] mx-auto px-5 box-border;
+  }
+
+  /* --- Tipografia --- */
+  .title-hero {
+    @apply font-poppins text-[3.75rem] font-bold leading-[1.2] max-[1100px]:text-[2.5rem];
+  }
+
+  .title-main {
+    @apply font-poppins text-[3rem] font-bold m-0 max-sm:text-[2rem];
+  }
+
+  .title-lg {
+    @apply font-poppins text-[2rem] font-bold max-sm:text-[1.5rem];
+  }
+
+  .title-card {
+    @apply font-poppins font-bold mb-2.5;
+  }
+
+  .text-body {
+    @apply font-open-sans leading-[1.8];
+  }
+
+  /* --- Cores --- */
+  .text-muted {
+    @apply text-[#999];
+  }
+
+  .bg-card {
+    @apply bg-[#eee];
+  }
+
+  /* --- Espacamentos --- */
+  .section-mb {
+    @apply mb-[100px];
+  }
 }
