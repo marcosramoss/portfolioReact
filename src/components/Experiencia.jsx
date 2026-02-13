@@ -30,7 +30,7 @@ const Experiencia = () => {
                   rel="noopener"
                 >
                   <img
-                    className="absolute right-10 -bottom-[320px] transition duration-500 cursor-pointer group-hover:-bottom-[290px]"
+                    className="absolute right-10 -bottom-[320px] transition-all duration-500 cursor-pointer group-hover:-bottom-[290px]"
                     src={PrintEw}
                     alt="print do site essencial web"
                   />

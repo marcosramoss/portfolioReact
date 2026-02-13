@@ -1,32 +1,33 @@
-# Permitir acesso Cross-Origin para imagens (Social Share)
-<IfModule mod_headers.c>
-    <FilesMatch "\.(png|jpg|jpeg|gif|svg|webp|ico)$">
-        Header set Access-Control-Allow-Origin "*"
-        Header set Cache-Control "public, max-age=604800, no-transform"
-    </FilesMatch>
-</IfModule>
-
-# Configuração para React Router (SPA)
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
   RewriteRule ^index\.html$ - [L]
+  # REGRA DE SEGURANÇA: Garantir que social-share.png seja servido diretamente
+  RewriteRule ^social-share\.png$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
 </IfModule>
 
-# Desabilitar listagem de diretórios
-Options -Indexes
-
 # Hostinger ModSecurity Fix
+
 # Tenta desativar para versões antigas (1.x) - Sugerido pelo suporte
+
 <IfModule mod_security.c>
   SecFilterEngine Off
   SecFilterScanPOST Off
 </IfModule>
 
 # Tenta desativar para versões novas (2.x/3.x) - Padrão moderno
+
 <IfModule mod_security2.c>
   SecRuleEngine Off
 </IfModule>
+
+# FORÇAR TIPO MIME CORRETO PARA A IMAGEM
+
+<Files "social-share.png">
+ForceType image/png
+Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+Header set Pragma "no-cache"
+</Files>

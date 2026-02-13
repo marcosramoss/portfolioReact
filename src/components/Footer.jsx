@@ -17,16 +17,16 @@ const Footer = () => {
         </div>
   
         <div className="flex flex-col items-start max-md:items-center max-md:text-center">
-          <h3>Contato</h3>
+          <h3 className='title-card'>Contato</h3>
           <ul className="p-0">
-            <li className="mb-2.5 text-body"><a href="mailto:marcosramoss.pessoal@gmail.com" className="hover:text-[#888] hover:translate-x-[30px] transition-transform block">marcosramoss.pessoal@gmail.com</a></li>
-            <li className="mb-2.5 text-body"><a href="tel: +351913463399" className="hover:text-[#888] hover:translate-x-[30px] transition-transform block">+351913463399</a></li>
-            <li className="mb-2.5 text-body"><a href="https://google.com/maps/place/Batalha/@39.657519,-8.8736517,13z/data=!3m1!4b1!4m6!3m5!1s0xd22754dcc2a014b:0x40721e63fabf1bed!8m2!3d39.6582957!4d-8.8241243!16zL20vMDd6bTZo?entry=ttu" target='blank' rel='noopener' className="hover:text-[#888] hover:translate-x-[30px] transition-transform block">Batalha, Leiria - Portugal</a></li>
+            <li className="mb-2.5 text-body"><a href="mailto:marcosramoss.pessoal@gmail.com" className="hover:text-[#888] block">marcosramoss.pessoal@gmail.com</a></li>
+            <li className="mb-2.5 text-body"><a href="tel: +351913463399" className="hover:text-[#888] block">+351913463399</a></li>
+            <li className="mb-2.5 text-body"><a href="https://google.com/maps/place/Batalha/@39.657519,-8.8736517,13z/data=!3m1!4b1!4m6!3m5!1s0xd22754dcc2a014b:0x40721e63fabf1bed!8m2!3d39.6582957!4d-8.8241243!16zL20vMDd6bTZo?entry=ttu" target='blank' rel='noopener' className="hover:text-[#888] block">Batalha, Leiria - Portugal</a></li>
           </ul>
         </div>
 
         <div className="flex flex-col items-start max-md:items-center max-md:text-center">
-          <h3>Redes</h3>
+          <h3 className='title-card'>Redes</h3>
           <ul className="flex gap-4 p-0">
             <li><a href="https://github.com/marcosramoss" title='Github' target='blank' rel='noopener'><IconBrandGithub size={32} /> </a> </li>
             <li><a href="https://www.linkedin.com/in/marcosramoss/" title='Linkedin' target='blank' rel='noopener'><IconBrandLinkedin size={32} /></a></li>

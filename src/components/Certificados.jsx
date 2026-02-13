@@ -3,15 +3,10 @@ import Section from "./Section";
 import Certificado from "./Certificado";
 import origamid from "../assets/origamidlogo.png";
 import cod3rlogo from "../assets/cod3rlogo.png";
-import Head from "./Head";
 
 const Certificados = () => {
   return (
     <Section>
-      <Head
-        title="Marcos Ramos | Certificados"
-        description="Veja meus certificados saiba tudo oque eu aprendi até agora."
-      />
       <div className="mt-[30px] section-mb">
         <div>
           <span className="text-body">Minhas conquistas.</span>
